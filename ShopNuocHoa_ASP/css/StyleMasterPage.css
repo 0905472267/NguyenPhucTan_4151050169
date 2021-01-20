@@ -1,0 +1,235 @@
+﻿* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url(../fonts/MaterialIcons-Regular.eot); /* For IE6-8 */
+    src: local('Material Icons'), local('MaterialIcons-Regular'), url(../fonts/MaterialIcons-Regular.woff2) format('woff2'), url(../fonts/MaterialIcons-Regular.woff) format('woff'), url(../fonts/MaterialIcons-Regular.ttf) format('truetype');
+}
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px; /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+}
+
+a {
+    color: black !important;
+}
+
+    a:hover {
+        text-decoration: none !important;
+    }
+
+body {
+    background-color: blueviolet;
+}
+
+header {
+    box-shadow: 0 5px 5px #ccc;
+    /*position: fixed;
+    top: 0;
+    background-color: white;
+    width: 100%;*/
+}
+
+.logo {
+    width: 25%;
+    overflow: hidden;
+}
+
+.search {
+    width: 60%;
+    display: flex;
+    align-items: center;
+}
+
+    .search .search-form {
+        width: 70%;
+    }
+
+    .search .ddl-search {
+        width: 30%;
+    }
+
+    .search .btn-search {
+        top: 0;
+        right: 0;
+    }
+
+.login {
+    width: 15%;
+    display: flex;
+    align-items: center;
+}
+
+    .login > div {
+        margin-right: 20px;
+    }
+
+    .login a {
+        display: block;
+        color: black !important;
+    }
+
+    .login > div > a:hover {
+        color: red !important;
+        cursor: pointer;
+    }
+
+#giohang i {
+    color: black !important;
+}
+
+#giohang span {
+    top: -5px;
+    right: 0;
+}
+
+.menu-parent {
+    z-index: 1;
+    position: fixed;
+}
+
+    .menu-parent li {
+        padding: 5px 10px;
+        text-align: left;
+    }
+
+    .menu-parent > li > a {
+        font-size: 23px;
+    }
+        .menu-parent > li > a:hover{
+            color:#f00 !important;
+        }
+
+        .menu-parent > li > a > i {
+            margin-top: 6px;
+        }
+
+/*Tranchu.aspx*/
+.silde-img {
+    text-align: center;
+}
+
+/*Nuochoatheodanhmuc.aspx*/
+.list-nuoc-hoa {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto; /*6 cot auto*/
+    grid-gap: 10px;
+    margin-top: 40px;
+}
+
+    .list-nuoc-hoa a {
+        color: black !important;
+        transition: .4s;
+    }
+
+        .list-nuoc-hoa a:hover {
+            text-decoration: none;
+            color: black !important;
+            box-shadow: 5px 5px 10px #ccc;
+        }
+
+.nuoc-hoa {
+    /*width: 20%;*/
+    background-color: aqua;
+    border: 1px solid #d4d4d4;
+    padding: 10px 0;
+}
+
+    .nuoc-hoa p {
+        font-weight: bold;
+        padding-left: 10px;
+    }
+
+.ten-nuoc-hoa {
+    color: black;
+    text-align: center;
+    display: block;
+    font-size: 20px;
+}
+
+.gia-nuoc-hoa {
+    display: block;
+    color: red;
+    font-size: 20px;
+    text-align: center;
+}
+
+
+
+/*Danh mục sản phẩm*/
+
+
+/*Footer*/
+footer {
+    margin-top: 20px;
+    background-color: black;
+    color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.footer a {
+    color: white !important;
+}
+
+.footer div {
+    flex-grow: 1;
+}
+
+    .footer div p {
+        margin-bottom: 20px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .footer div a {
+        display: block;
+    }
+
+        .footer div a:hover {
+            cursor: pointer;
+            color: red !important;
+        }
+
+.hoa-foot {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+}
+
+    .hoa-foot img {
+        z-index: 1;
+    }
+
+    .hoa-foot > div {
+        height: 5px;
+        background-color: #ccc;
+        position: absolute;
+        width: 100%;
+        z-index: 0;
+        box-shadow: 0 -2px 5px #ccc;
+    }

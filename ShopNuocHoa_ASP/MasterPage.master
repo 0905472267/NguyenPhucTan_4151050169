@@ -1,0 +1,163 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link href="css/StyleMasterPage.css" rel="stylesheet" />
+    <link href="css/StyleDanhMucNuocHoat.css" rel="stylesheet" />
+    <link href="css/StyleLogin.css" rel="stylesheet" />
+
+    <%--bootstrap--%>
+    <%--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>--%>
+
+    <%--off line--%>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <%--gg fonr--%>
+    <link rel="stylesheet" type="text/css" href="fonts/material-icons.css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <header>
+                <div class="container">
+                    <%--Top-Header (contain logo,search, and login)--%>
+                    <div class="d-flex">
+                        <div class="logo">
+                            <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/Trangchu.aspx">
+                                <asp:Image ID="Image1" runat="server" ImageUrl="~/Img/Logo.png" Width="100%" />
+                            </asp:HyperLink>
+                        </div>
+                        <%--End Logo--%>
+                        <div class="ml-2 search">
+                            <div class="search-form position-relative">
+                                <form action="~/TimKiemNuocHoa.aspx"> 
+                                    <input type="search" class="form-control" placeholder="Tìm kiếm nước hoa..." />
+                                        <asp:HyperLink ID="HyperLink1" NavigateUrl="~/TimKiemNuocHoa.aspx" CssClass="btn bg-transparent position-absolute btn-search" runat="server"> 
+                                            <i class="material-icons">search</i></asp:HyperLink>
+                       
+                                </form>
+                            </div>
+                            <div class="ddl-search ml-2">
+                                <div class="dropdown">
+                                    <button type="button"  class="btn bg-transparent border-dark dropdown-toggle" data-toggle="dropdown">
+                                        Chọn thương hiệu
+                                    </button>
+                                    <div class="dropdown-menu bg-white">
+                                        <a class="dropdown-item" href="#">Thương hiệu 1</a>
+                                        <a class="dropdown-item" href="#">Thương hiệu 2</a>
+                                        <a class="dropdown-item" href="#">Thương hiệu 3</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <%--End Search--%>
+                        <div class="login">
+                            <div>
+                                <asp:Label ID="lblThongTin" runat="server"></asp:Label>
+                                <asp:HyperLink ID="HyperDN" runat="server" NavigateUrl="~/DangNhap.aspx">Đăng nhập</asp:HyperLink>
+                                <asp:HyperLink ID="HyperDK" runat="server" NavigateUrl="~/DangKy.aspx">Đăng ký</asp:HyperLink>
+                                <asp:LinkButton ID="HyperDX" runat="server" OnClick="HyperDX_Click">Đăng xuất</asp:LinkButton>
+                            </div>
+                            <asp:LinkButton ID="lbtnGioHang" CssClass="position-relative" runat="server" OnClick="lbtnGioHang_Click">
+                                <i class="material-icons" style="font-size:40px;">shopping_cart</i>
+                                <%--<span class="badge badge-danger position-absolute">10</span>--%>
+                            </asp:LinkButton>
+
+                        </div>
+                        <%--End Login--%>
+                    </div>
+                    <%--End Top-Header--%>
+
+                    <%--Menu--%>
+                    <div class="d-flex mt-3">
+                        <ul class="menu-parent nav d-flex position-relative">
+                            <li class="nav-item">
+                                <asp:HyperLink CssClass="nav-link d-flex justify-content-center" ID="HyperLink5" runat="server" NavigateUrl="~/DanhMucNuocHoa.aspx">
+                                    <i class="material-icons" style="font-size:23px">menu</i>
+                                    Danh mục
+                                    <i class="material-icons" style="font-size:23px">expand_more</i>
+                                </asp:HyperLink>
+                            </li>
+                            <li class="nav-item">
+                                <asp:HyperLink CssClass="nav-link" ID="HyperLink6" runat="server" NavigateUrl="~/Trangchu.aspx">SP khuyến mãi</asp:HyperLink>
+                            </li>
+                            <li class="nav-item">
+                                <asp:HyperLink CssClass="nav-link" ID="HyperLink7" runat="server" NavigateUrl="~/Trangchu.aspx">SP bán chạy</asp:HyperLink>
+                            </li>
+                            <li class="nav-item">
+                                <asp:HyperLink CssClass="nav-link" ID="HyperLink8" runat="server" NavigateUrl="~/Trangchu.aspx">Tư vấn</asp:HyperLink>
+                            </li>
+                            <li class="nav-item">
+                                <asp:HyperLink CssClass="nav-link" ID="HyperLink9" runat="server" NavigateUrl="~/Trangchu.aspx">Blog</asp:HyperLink>
+                            </li>
+                            <li class="nav-item">
+                                <asp:HyperLink CssClass="nav-link" ID="HyperLink10" runat="server" NavigateUrl="~/Trangchu.aspx">Video</asp:HyperLink>
+                            </li>
+                        </ul>
+                    </div>
+                    <%--End Menu--%>
+                </div>
+                <%-- End container--%>
+            </header>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+            <div class="hoa-foot">
+                <asp:Image ID="Image4" runat="server" ImageUrl="~/Img/flower.png" />
+                <div></div>
+            </div>
+            <footer>
+                <div class="footer container d-flex ">
+                    <div>
+                        <p>Giới thiệu</p>
+                        <asp:HyperLink ID="HyperLink20" runat="server">Giới thiệu về TGNH</asp:HyperLink>
+                        <asp:HyperLink ID="HyperLink21" runat="server">Quan điểm kinh doanh</asp:HyperLink>
+                        <asp:HyperLink ID="HyperLink19" runat="server">Bản quyền & Sở hữu</asp:HyperLink>
+                    </div>
+                    <div>
+                        <p>Chính sách công ty</p>
+                        <asp:HyperLink ID="HyperLink23" runat="server">Điều khoản sử dụng</asp:HyperLink>
+                        <asp:HyperLink ID="HyperLink24" runat="server">Chính sách bảo mật thông tin</asp:HyperLink>
+                        <asp:HyperLink ID="HyperLink35" runat="server">Chính sách giao hàng</asp:HyperLink>
+                        <asp:HyperLink ID="HyperLink36" runat="server">Chính sách bảo hành</asp:HyperLink>
+                        <asp:HyperLink ID="HyperLink27" runat="server">Chính sách đổi trả</asp:HyperLink>
+                        <asp:HyperLink ID="HyperLink22" runat="server">Nhượng quyền thương hiệu</asp:HyperLink>
+                    </div>
+                    <div>
+                        <p>Trợ giúp</p>
+                        <asp:HyperLink ID="HyperLink25" runat="server">Hướng dẫn sử dụng nước hoa</asp:HyperLink>
+                        <asp:HyperLink ID="HyperLink28" runat="server">Hướng dẫn mua hàng</asp:HyperLink>
+                        <asp:HyperLink ID="HyperLink26" runat="server">Phương thức thanh toán</asp:HyperLink>
+                        <asp:HyperLink ID="HyperLink29" runat="server">Gói quà miễn phí</asp:HyperLink>
+
+                    </div>
+                    <div>
+                        <p>Thông tin khác</p>
+                        <asp:HyperLink ID="HyperLink30" runat="server">Hoạt động TGNH</asp:HyperLink>
+                        <asp:HyperLink ID="HyperLink31" runat="server">Member card</asp:HyperLink>
+                        <asp:HyperLink ID="HyperLink32" runat="server">Gift Voucher</asp:HyperLink>
+
+                    </div>
+                    <div>
+                        <p>Liên hệ</p>
+                        <asp:HyperLink ID="HyperLink33" runat="server">Thông tin showroom</asp:HyperLink>
+                        <asp:HyperLink ID="HyperLink34" runat="server">Liên hệ</asp:HyperLink>
+
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </form>
+</body>
+</html>

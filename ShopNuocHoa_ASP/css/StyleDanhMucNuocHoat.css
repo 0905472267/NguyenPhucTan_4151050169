@@ -1,0 +1,105 @@
+﻿body {
+}
+
+.danhmuc {
+    display: grid;
+    grid-template-columns: 20% 80%;
+}
+
+.product-item {
+    width: 178px;
+    height: 320px;
+    margin-right: 5px;
+    margin-left: 5px;
+    text-align: center;
+    margin: 20px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    transition: .2s;
+    padding: 5px;
+}
+
+    .product-item:hover {
+        box-shadow: 5px 5px 10px #ccc;
+    }
+
+    .product-item .product-name {
+        width: 100%;
+        font-weight: 700;
+        margin-top: 5px;
+        height: 70px;
+        display: block;
+    }
+
+    .product-item .product-price {
+        color: red;
+        font-weight: 900;
+        margin-top: 20px;
+        display: block;
+    }
+
+.btn-action {
+    color: white !important;
+    margin: 0 2px;
+}
+
+
+/*ChiTietSanPham.aspx*/
+.tbl-chitiet {
+    margin-top: 20px;
+}
+
+    .tbl-chitiet img {
+        /*margin: 0 20px;*/
+    }
+
+    .tbl-chitiet b {
+        padding-left: 5px;
+        padding-right: 15px;
+    }
+
+.product-description {
+    margin-top: 20px;
+}
+
+/*Left Danh Mục*/
+.danhmuc-header {
+    text-align: center;
+    background-color: ##1055f1;
+}
+.danh-muc{
+    margin-top:20px;
+    border:none;    
+}
+.danh-muc td{
+    border:none !important;
+}
+.danh-muc a {
+    background-color: orange;
+    color: white !important;
+    padding: 10px 7px;
+    display: block;
+    border-bottom: 1px solid #fff;
+}
+
+    .danh-muc a:hover {
+        background-color: #ea6607;
+    }
+
+    .danh-muc a:focus {
+        background-color: #ea6607;
+    }
+
+.product-detail div {
+    padding-left: 20px;
+    margin-bottom: 5px;
+}
+
+    .product-detail div b {
+        display: inline-block;
+        width: 145px;
+    }
+
+    .product-detail div a {
+        color: white !important;
+    }
